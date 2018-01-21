@@ -17,6 +17,10 @@ our $scenario = {
         {
             fcall_template => 'List::Flatten::XS::flatten(<data>)',
         },
+        {
+            fcall_template => 'List::Flat::flat(@{<data>})',
+            result_is_list => 1,
+        },
     ],
     datasets => [
         {name => '10_1_1', args => {data=>[1, 2, 3, 4, [5], 6, 7, 8, 9, 10]}},
